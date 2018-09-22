@@ -1,0 +1,408 @@
+@import 'vars';
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+
+* {
+	box-sizing: border-box;
+  transition: all .25s;
+  margin:0;
+  padding: 0;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+body {
+	color:  #fff;
+	font: 14px/1.6 $text-ff;
+}
+
+  .intro {
+    min-height: 100vh;
+    background-image: url(../img/main.jpg);
+    background-position: center;
+     background-size: cover;
+    background-repeat: no-repeat;
+
+    .header {
+      padding-top: 30px;
+      
+      &:before, &:after {
+          content: "";
+          display: table;
+      }
+      &:after {
+        clear: both;
+      }
+     
+    }
+
+    .logo {
+      float: left;
+      width: 145px;
+      height: 41px;
+      font-family: Lato;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 2.3px;
+      text-align: left;
+      color: #fff;
+      color: $text-color;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+      
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+      }
+           
+      span {
+        color: #f8c51c;
+        color: $secondary-color;
+        
+       
+      }
+
+
+
+    }
+
+    .nav {
+      float: left;
+     
+      margin-left: 120px;
+      margin-top: 10px;
+      
+      height: 25px;
+      // font-family: HelveticaNeue;
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      text-align: left;
+      color: #fff;
+      
+      
+      .menu {
+        display: inline-block;
+        margin: 0;
+
+        
+
+         li {
+          display: inline-block;
+          list-style-type: none;
+          margin-right: 50px;
+          &:last-of-type {
+            margin-right: 0;
+          }
+            a {
+              text-decoration: none;
+              color: $text-color;
+             
+            }
+          
+         }
+      }
+    }
+
+    .lang {
+      float: right;
+      /* выше собираюсь стереть вариант, также стрелочка нужна */
+      .arrow {
+        border-left: 1px solid $secondary-color;
+        display: inline-block;
+        margin-left: 6px;
+        height: 24px;
+      }
+    }
+
+    .intro-wrap {
+      margin-top: 100px;
+      &:before, &:after {
+          content: "";
+          display: table;
+      }
+      &:after {
+        clear: both;
+      }
+    }
+
+
+
+    .inner {
+      
+      float: left;
+      .slogan {
+
+        background-color: $secondary-color;
+        color: $text-color;
+        font-weight: 900;
+        letter-spacing: 0.8px;
+        font-size: 21px;
+        font-stretch: condensed;
+        text-transform: uppercase;
+        display: inline-block;
+              
+      }
+
+      .inner__text {
+        margin-top: 15px;
+        font-size: 40px;
+        font-weight: 900;
+  
+        line-height: 0.78;
+        letter-spacing: 2.7px;
+          span {
+           color: $secondary-color;
+          text-transform: uppercase;
+          }
+      }
+
+      .tablo {
+        margin-top: 25px;
+
+        .tablo-item {
+          display: inline-block;
+          margin-left: 30px;
+          &:first-of-type {margin-left: 0}
+           p {
+            // width: 36px;
+            // height: 54px;
+ 
+             padding: 0 8px 0;
+             font-size: 40px;
+             font-weight: 900;
+             // letter-spacing: -0.6px;
+             text-align: left;
+             color: $third-color;
+             background-color: #fff;
+             display: inline-block;
+             vertical-align: middle;
+             border-radius: 3px;
+             &:first-of-type {margin-right: 10px;}
+           }
+
+           .tablo__days {
+             font-size: 20px;
+             font-weight: bold;
+             letter-spacing: -1px;
+             text-transform: uppercase;
+             color:#a3a3a3;
+             width: 100%;
+             text-align: center;
+           }
+
+        }
+      }
+
+      .inner__text2 {
+        margin-top: 20px;
+        width: 551px;
+        font-size: 25px;
+        line-height: 0.92;
+        letter-spacing: -1.3px;
+        text-transform: lowercase;
+          
+
+        
+      } 
+
+      .inner__text3 { 
+        margin-top: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 0.92;
+        letter-spacing: -1.3px;
+        color: #f8c51c;
+        color: $secondary-color;
+        text-transform: uppercase;
+        
+      } 
+
+    }
+
+    .form {
+      width: 468px;
+      // с размерами формы надо что-то сделать
+      height: 401px;
+      border-radius: 3px;
+      background-color: #fff; 
+      float: right;
+     
+      // margin-right: 70px;
+      
+      .form-header {
+        width: 100%;
+        height: auto;
+        background-color: #333; 
+        margin-right: 80px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        padding: 18px 12px 12px;
+        text-align: center;
+
+
+        .form-header__text1 {
+          font-size: 31px;
+          font-weight: bold;
+          letter-spacing: -0.9px;
+          color: $secondary-color;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          border-top-radius: 3px;
+          
+        }
+        .form-header__text2 {
+          font-size: 25px;
+          font-weight: bold;
+          letter-spacing: -0.3px;
+          color: #fff;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          margin-top: 8px;
+        }
+
+      } 
+      
+      .form-main {
+         position: relative;
+         border-radius: 3px;
+         padding: 30px 12px 30px;
+         background-color: #111;
+
+         .input {
+           width: 100%;
+           padding: 12px;
+           border-radius: 3px;
+           border: 1px solid #8f8f8f;
+
+           font-size: 16px;
+           font-weight: 300;
+           letter-spacing: 0.6px;
+           text-align: left;
+           color: #8f8f8f;
+
+           &:first-of-type {
+            margin-bottom: 15px;
+           }
+
+           &:last-of-type {
+            margin-top: 12px;
+           }
+
+           &:hover, &:active, &:focus {
+            outline: none;
+            color: $third-color;
+           }
+
+           label {
+            color: #8f8f8f;
+           }
+
+
+
+           // &:placeholder {
+           //    font-size: 16px;
+           //    font-weight: 300;
+           //    letter-spacing: 0.6px;
+           //    text-align: left;
+           //    color: #8f8f8f;
+           // }
+
+           // hover {
+              
+           // }
+         }
+      }
+
+      .form__bonus {
+        position: absolute;
+        width: 132px;
+        height: 132px;
+
+        top: -48px;
+        right: -66px;
+        background-image: url(../img/group-21@2x.png);
+        background-size: 96%;
+        background-position: center;
+        background-repeat: no-repeat;
+        // бэкграунд сайз глянуть
+
+      }
+
+    
+
+    }
+
+  }
+
+  .btn {
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #f8c51c;
+    display: inline-block;
+    background-color: $secondary-color;
+    color: #fff;
+    color: $text-color;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    outline: none;
+
+    
+     &:first-of-type {
+       margin-right: 18px;
+     }
+
+    // &--transparent {
+    //    
+    //    background-color: transparent;
+    //    border: 1px solid $secondary-color;
+    // }
+    // узнать, это кнопка при нажатии такой становится?
+
+    &:hover {
+      
+      background-color: transparent;
+      border: 1px solid $secondary-color;
+      cursor: pointer;
+    }
+
+  }
+
+
+
+
+
+
+
+   .container {
+      width: 1180px;
+      padding-left: 25px; 
+      padding-right: 25px; 
+      margin-left: auto;
+      margin-right: auto;
+       @media screen and (max-width: 1200px) {
+        width: 1070px;
+       }
+
+        @media screen and (max-width: 992px) {
+        width: 750px;
+       }
+
+         @media screen and (max-width: 768px) {
+        width: 90%;
+       }
+    }
+
+
+ 
+
+
+// галп для самых маленьких полное руководство? посмотреть
+// джедай вёрстка и другие каналы подобные 
+// в пгту курсы по веб-разработке, спросить Сергея открываются (ворд пресс-js)
